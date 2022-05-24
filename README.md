@@ -26,16 +26,27 @@ npm install
 
 
 Now Run the applications step: 
+
+i)open mosca 
+
 1) sudo lsof -i:3000
-cd webservice/server/node-server
-node ./server.js
+2) cd webservice/server/node-server
+3) node ./server.js
 
-2) cd ../../ui
-npm run dev
 
-3) cd ../..
-sudo ffserver -f ./ffmpeg/server.conf
+ii)open the gui
 
-4) source /opt/intel/openvino/bin/setupvars.sh
+1) cd ../../ui
+2) npm run dev
 
-python3 people_counter.py -m /opt/intel/openvino/deployment_tools/open_model_zoo/tools/downloader/intel/person-detection-retail-0013/FP32/person-detection-retail-0013.xml -d CPU -pt 0.6 | ffmpeg -v warning -f rawvideo -pixel_format bgr24 -video_size 768x432 -framer
+iii)
+1) cd ../..
+2) sudo ffserver -f ./ffmpeg/server.conf
+
+iv) 
+1) source /opt/intel/openvino/bin/setupvars.sh
+2) source openvino_env/bin/activate
+3) cd ./applications
+4) python3 people_counter.py -m /opt/intel/openvino/deployment_tools/open_model_zoo/tools/downloader/intel/person-detection-retail-0013/FP32/person-detection-retail-0013.xml -d CPU -pt 0.6 | ffmpeg -v warning -f rawvideo -pixel_format bgr24 -video_size 768x432 -framer
+
+
