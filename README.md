@@ -1,10 +1,10 @@
-# passenger_counter_app
+# Intel OpenVino passenger_counter_app
 
 ### Prerequisites : 
 
 1) Ubuntu 18.04
 2) Python 3.6
-3)OpenVino toolkit 2020.3
+3) OpenVino toolkit 2020.3
 
 ./setup.sh
 
