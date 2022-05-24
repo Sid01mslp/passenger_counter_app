@@ -39,11 +39,13 @@ ii)open the gui
 1) cd ../../ui
 2) npm run dev
 
-iii)
+iii) openning ffpeg server
+
 1) cd ../..
 2) sudo ffserver -f ./ffmpeg/server.conf
 
-iv) 
+iv) run using python script
+
 1) source /opt/intel/openvino/bin/setupvars.sh
 2) source openvino_env/bin/activate
 3) cd ./applications
