@@ -11,4 +11,19 @@ services:
         stdin_open: true
         tty: true
 
+    server:
+        build: ./server
+        ports:
+            - "8000:8000"
+        volumes:
+            - .:/app
+        depends_on:
+            - db
+    db:
+        image: db
+        volumes:
+            - ./db:./db/data.db
+        ports:
+            - '1884:1884'
+
 
